@@ -1,6 +1,8 @@
 # backup-azcopy-pastas-arquivos
 Backup de pastas/arquivos do servidor Linux para o Storage Account no Azure.
 
+`Criar arquivo.sh`
+
 ```
 #!/bin/bash
 
@@ -29,4 +31,10 @@ sas="https://$blob.blob.core.windows.net/$container/$site/files/?$token"
 
 # AzCopy -> Storage Account (stowebapp)
 /home/az_copy/azcopy cp --recursive $path "$sas"
+```
+# Agendar no Crontab o backup
+`crontab -e`
+```
+# CRONTAB - backup externo
+0 23 * * * bash /home/scripts/azcopy_db_glpi.sh
 ```
