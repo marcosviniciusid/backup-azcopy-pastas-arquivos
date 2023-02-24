@@ -36,5 +36,5 @@ sas="https://$blob.blob.core.windows.net/$container/$site/files/?$token"
 `crontab -e`
 ```
 # CRONTAB - backup externo
-0 23 * * * bash /home/scripts/azcopy_db_glpi.sh
+0 23 * * * bash /home/scripts/azcopy_files_glpi.sh
 ```
