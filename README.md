@@ -25,9 +25,10 @@ path='/var/www/html/glpi/sound/'
 blob='nome-storage-account'
 container='nome-container-blob'
 token='sas-do-container-blob'
+folder='files'
 
 # Token SAS
-sas="https://$blob.blob.core.windows.net/$container/$site/files/?$token"
+sas="https://$blob.blob.core.windows.net/$container/$site/$folder/?$token"
 
 # AzCopy -> Storage Account (stowebapp)
 /home/az_copy/azcopy cp --recursive $path "$sas"
